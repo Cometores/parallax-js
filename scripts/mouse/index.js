@@ -1,4 +1,6 @@
-const  parallax_el = document.querySelectorAll(".parallax");
+import parallaxSpeed from './parallaxSpeed.json' assert { type: "json" };
+
+const parallax_el = document.querySelectorAll(".parallax");
 
 let xValue = 0,
     yValue = 0;
@@ -6,11 +8,12 @@ let xValue = 0,
 let rotateDegree = 0;
 
 function update(cursorX) {
-    parallax_el.forEach(el => {
-        let speedx= el.dataset.speedx;
-        let speedy= el.dataset.speedy;
-        let speedz= el.dataset.speedz;
-        let rotateSpeed = el.dataset.rotation;
+    parallax_el.forEach((el) => {
+        const speeds = parallaxSpeed[el.classList[1]];
+        let speedx= speeds.x;
+        let speedy= speeds.y;
+        let speedz= speeds.z;
+        let rotateSpeed = speeds.rotation;
 
         /* Taking x-mouse-pos and component's "left" CSS property */
         let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : - 1;
