@@ -36,3 +36,9 @@ window.addEventListener("mousemove", (e) => {
 
     update(e.clientX);
 })
+
+
+/* GSAP Animation */
+// let timeline = gsap.timeline();
+//
+// timeline.from()
