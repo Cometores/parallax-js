@@ -25,9 +25,11 @@ extended down to the end of the screen.
 When we move the mouse to the right, all the layers slide to the left, and when we move to the left,
 layers slide to the right.
 The speed of the layers farther away from the viewer is faster than the speed of the closer layers.
+![TransformX](./others/TransformX.png)
 
 ### Moving along the y-axis
 Layers move in the direction of mouse movement. The speed of the distant layers is greater.
+![TransformY](./others/TransformY.png)
 
  ### Moving along the z-axis. Enlargement of the image
 When the cursor moves to the right, the layers to the right of the center of the screen are 
@@ -35,8 +37,9 @@ enlarged and those to the left are reduced.
 When the cursor moves to the left, the layers to the left are enlarged.
 
 Layers closer to the user are enlarged more.
+![TransformY](./others/TransformZ.png)
 
-# Rotation
+### Rotation
 When the cursor moves to the right, all layers rotate clockwise, when to the left, 
 they rotate counterclockwise.
 
