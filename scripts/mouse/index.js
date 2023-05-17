@@ -28,7 +28,7 @@ function initialization() {
         const speeds = parallaxSpeed[el.classList[1]];
         imgArray.push(
             {
-                el: el,
+                el,
                 inLeft: parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : - 1,
                 speedx: speeds.x,
                 speedy: speeds.y,
