@@ -11,12 +11,12 @@ the layer relative to the viewer.
 ## Image preparation
 First you have to choose a picture in which you can trace the depth. In this picture, for example, the mountains are 
 farther away than the mill.
-![Original](./others/OriginalImg.png)
+![Original](pictures/docu/OriginalImg.png)
 
 In this way we can split the picture into separate layers. It is worth saying that in this case you need to extend the 
 length of the picture, so that when you move there are no gaps between the images. You can see that the forest layer is 
 extended down to the end of the screen.
-![Layers](./others/ImgLayers.png)
+![Layers](pictures/docu/ImgLayers.png)
 
 
 ## Mouse parallax
@@ -25,11 +25,11 @@ extended down to the end of the screen.
 When we move the mouse to the right, all the layers slide to the left, and when we move to the left,
 layers slide to the right.
 The speed of the layers farther away from the viewer is faster than the speed of the closer layers.
-![TransformX](./others/TransformX.png)
+![TransformX](pictures/docu/TransformX.png)
 
 ### Moving along the y-axis
 Layers move in the direction of mouse movement. The speed of the distant layers is greater.
-![TransformY](./others/TransformY.png)
+![TransformY](pictures/docu/TransformY.png)
 
  ### Moving along the z-axis. Enlargement of the image
 When the cursor moves to the right, the layers to the right of the center of the screen are 
@@ -37,7 +37,7 @@ enlarged and those to the left are reduced.
 When the cursor moves to the left, the layers to the left are enlarged.
 
 Layers closer to the user are enlarged more.
-![TransformY](./others/TransformZ.png)
+![TransformY](pictures/docu/TransformZ.png)
 
 ### Rotation
 When the cursor moves to the right, all layers rotate clockwise, when to the left, 

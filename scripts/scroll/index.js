@@ -1,34 +1,59 @@
-const translate = document.querySelectorAll(".translate");
-const big_title = document.querySelector(".big-title");
+const translateElements = document.querySelectorAll(".translate");
+const bigTitle = document.querySelector(".big-title");
 const header = document.querySelector("header");
 const shadow = document.querySelector(".shadow");
 const content = document.querySelector(".content");
 const section = document.querySelector("section");
-const image_container = document.querySelector(".imgContainer");
-const opacity = document.querySelectorAll(".opacity");
+const imageContainer = document.querySelector(".imgContainer");
+const opacityElements = document.querySelectorAll(".opacity");
 const border = document.querySelector(".border");
 
-let header_height = header.offsetHeight;
-let section_height = section.offsetHeight;
+const headerHeight = header.offsetHeight;
+const sectionHeight = section.offsetHeight;
 
-window.addEventListener('scroll', () => {
-    let scroll = window.pageYOffset;
-    let sectionY = section.getBoundingClientRect();
-    
-    translate.forEach(element => {
-        let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
+function handleScroll() {
+    const scrollY = window.pageYOffset;
+    const sectionRect = section.getBoundingClientRect();
+
+    // Параллакс эффект для элементов
+    translateElements.forEach((element) => {
+        const speed = parseFloat(element.dataset.speed);
+        element.style.transform = `translateY(${scrollY * speed}px)`;
     });
 
-    opacity.forEach(element => {
-        element.style.opacity = scroll / (sectionY.top + section_height);
-    })
+    // Изменение прозрачности
+    opacityElements.forEach((element) => {
+        element.style.opacity = scrollY / (sectionRect.top + sectionHeight);
+    });
 
-    big_title.style.opacity = - scroll / (header_height / 2) + 1;
-    shadow.style.height = `${scroll * 0.5 + 300}px`;
+    // Изменение прозрачности заголовка
+    bigTitle.style.opacity = Math.max(-scrollY / (headerHeight / 2) + 1, 0);
 
-    content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
-    image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
+    // Изменение высоты тени
+    shadow.style.height = `${scrollY * 0.5 + 300}px`;
 
-    border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
-})
+    // Параллакс эффект для контента и изображения
+    content.style.transform = `translateY(${(scrollY / (sectionHeight + sectionRect.top) * 50) - 50}px)`;
+    imageContainer.style.transform = `translateY(${(scrollY / (sectionHeight + sectionRect.top) * -50) + 50}px)`;
+
+    // Изменение ширины бордера
+    border.style.width = `${(scrollY / (sectionRect.top + sectionHeight)) * 30}%`;
+}
+
+// Запрещаем зумирование страницы
+const disableZoom = () => {
+    document.addEventListener("wheel", (event) => {
+        if (event.ctrlKey) event.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && ["+", "-", "0"].includes(event.key)) {
+            event.preventDefault();
+        }
+    });
+};
+
+// Обработка события прокрутки
+window.addEventListener('scroll', handleScroll);
+
+disableZoom();

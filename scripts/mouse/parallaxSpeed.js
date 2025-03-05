@@ -1,47 +1,48 @@
+export default
 {
-  "bg-img": {
+  "l1_background": {
     "x": "0.3",
     "y": "0.38",
     "z": "0",
     "rotation": "0"
   },
-  "fog-7": {
+  "l2_fog": {
     "x": "0.27",
     "y": "0.32",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-10": {
+  "l3_mountain": {
     "x": "0.195",
     "y": "0.305",
     "z": "0",
     "rotation": "0"
   },
-  "fog-6": {
+  "l4_fog": {
     "x": "0.25",
     "y": "0.28",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-9": {
+  "l5_mountain": {
     "x": "0.125",
     "y": "0.155",
     "z": "0.15",
     "rotation": "0.02"
   },
-  "mountain-8": {
+  "l6_mountain": {
     "x": "0.1",
     "y": "0.11",
     "z": "0",
     "rotation": "0.02"
   },
-  "fog-5": {
+  "l7_fog": {
     "x": "0.16",
     "y": "0.105",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-7": {
+  "l8_mountain": {
     "x": "0.1",
     "y": "0.1",
     "z": "0",
@@ -53,61 +54,61 @@
     "z": "0",
     "rotation": "0.11"
   },
-  "mountain-6": {
+  "l9_mountain": {
     "x": "0.065",
     "y": "0.05",
     "z": "0.05",
     "rotation": "0.05"
   },
-  "fog-4": {
+  "l10_fog": {
     "x": "0.135",
     "y": "0.1",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-5": {
+  "l11_mountain": {
     "x": "0.08",
     "y": "0.06",
     "z": "0.13",
     "rotation": "0.1"
   },
-  "fog-3": {
+  "l12_fog": {
     "x": "0.11",
     "y": "0.018",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-4": {
+  "l13_mountain": {
     "x": "0.059",
     "y": "0.024",
     "z": "0.35",
     "rotation": "0.14"
   },
-  "mountain-3": {
+  "l14_mountain": {
     "x": "0.04",
     "y": "0.018",
     "z": "0.32",
     "rotation": "0.05"
   },
-  "fog-2": {
+  "l15_fog": {
     "x": "0.15",
     "y": "0.0115",
     "z": "0",
     "rotation": "0"
   },
-  "mountain-2": {
+  "l16_mountain": {
     "x": "0.0235",
     "y": "0.013",
     "z": "0.42",
     "rotation": "0.15"
   },
-  "mountain-1": {
+  "l17_mountain": {
     "x": "0.027",
     "y": "0.018",
     "z": "0.53",
     "rotation": "0.2"
   },
-  "fog-1": {
+  "l20_fog": {
     "x": "0.12",
     "y": "0.01",
     "z": "0.53",
